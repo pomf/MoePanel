@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MoePanel Login</title>
+    <title>Moe Panel Login</title>
 
     <!-- Bootstrap core CSS -->
 <link href="includes/css/bootstrap.min.css" rel="stylesheet">
@@ -42,7 +42,7 @@
 <main class="form-signin">
   <form action="includes/php/api.php?d=login" method="POST">
     <img class="mb-4" src="includes/img/logo.png" alt="" width="150" height="150">
-    <h1 class="h3 mb-3 fw-normal">MoePanel~</h1>
+    <h1 class="h3 mb-3 fw-normal">Moe Panel~</h1>
 
     <div class="form-floating">
       <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">

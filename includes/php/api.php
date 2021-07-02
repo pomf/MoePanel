@@ -16,8 +16,9 @@ switch($_GET['d']) {
         break;
 
     case "fetchData":
-        fetchData($_GET['count'], $_GET['keyword']);
+        fetchData($_GET['keyword']);
         break;
+
 
     case 'logout':
         session_unset();

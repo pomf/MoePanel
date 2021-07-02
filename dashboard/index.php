@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MoePanel - Dashboard</title>
+    <title>Moe Panel - Dashboard</title>
 
     <!-- Bootstrap core CSS -->
 <link href="../includes/css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
 
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
   
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="index.php"><img src="../includes/img/logo.png" alt="" width="30" height="30">  MoePanel</a>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="index.php"><img src="../includes/img/logo.png" alt="" width="30" height="30">  Moe Panel</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -53,6 +53,20 @@ require_once('skel/nav.html');
 if(!isset($_GET['p'])){
   require_once('skel/stats.php');
 }
+
+if(isset($_GET['p'])){
+switch ($_GET['p']) {
+
+  case 'files':
+    require_once('skel/file.php');
+    break;
+
+  default:
+  echo "xd";
+  break;
+}
+}
+
 ?>
 
 

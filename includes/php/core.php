@@ -72,7 +72,15 @@ function countSize () {
 
 }
 
-function fetchData ($count, $keyWord) {
+function fetchData ($keyWord) {
 
+    global $db;
+    $key = ''.$keyWord.'';
+    $d = $db->prepare("SELECT * FROM files WHERE filename like :word OR hash like :word OR ip like :word OR originalname like :word LIMIT 50");
+    $d->bindParam(':word', $key);
+    $d->execute();
+    $json = json_encode($d->fetchAll(PDO::FETCH_ASSOC), JSON_FORCE_OBJECT);
 
+    print $json;
+    
 }
