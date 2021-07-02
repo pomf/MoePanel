@@ -26,11 +26,15 @@
           font-size: 3.5rem;
         }
       }
+
+
     </style>
+
+  
 
     
     <!-- Custom styles for this template -->
-    <link href="css/signin.css" rel="stylesheet">
+    <link href="includes/css/signin.css" rel="stylesheet">
   </head>
 
   <body class="text-center">
@@ -49,7 +53,26 @@
       <label for="floatingPassword">Password</label>
     </div>
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted" id="fail" style="display:none;"></p>
   </form>
-</main>    
+  
+
+
+</main>
+<script>
+var textElement = document.getElementById('fail');
+if(window.location.hash == '#fail-cred'){
+    textElement .style.display = 'block';
+    textElement .innerHTML = 'Wrong email or password!';
+}
+if(window.location.hash == '#fail-limit'){
+    textElement .style.display = 'block';
+    textElement .innerHTML = 'Wait 10 minutes before trying again!';
+}
+if(window.location.hash == '#logout'){
+    textElement .style.display = 'block';
+    textElement .innerHTML = 'You have been logged out.';
+}
+</script>
   </body>
 </html>

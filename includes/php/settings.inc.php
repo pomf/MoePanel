@@ -1,6 +1,7 @@
 <?php
 
-define('MOE_DB_CONN', 'mysql:unix_socket=/tmp/mysql.sock;dbname=pomf');
+//define('MOE_DB_CONN', 'mysql:unix_socket=/tmp/mysql.sock;dbname=pomf');
+define('MOE_DB_CONN', 'sqlite:/Users/neku/Documents/MoePanel/MoePanel/test.sq3');
 
 /**
  * PDO database login credentials
@@ -25,7 +26,7 @@ define('LENGTH', 32);
 define('PU_NAME', 'Uguu');
 define('PU_ADDRESS', 'uguu.se');
 define('PU_SERVE_URL', 'https://a.uguu.se/');
-define('MOE_URL', 'https://moe.uguu.se');
+define('MOE_URL', 'http://localhost:8080/');
 define('ID_CHARSET', '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
 
 /** SMTP email settings */

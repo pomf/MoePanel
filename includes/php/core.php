@@ -8,17 +8,17 @@ function login ($user, $pass) {
     global $db;
 
     $d = $db->prepare("SELECT pass, id, email, level FROM accounts WHERE email = (:email)");
-    $d->bindParam(':email', $email);
+    $d->bindParam(':email', $user);
     $d->execute();
     $result = $d->fetch(PDO::FETCH_ASSOC);
 
-    if(password_verify($pass, $result['pass'])){
+    if(password_verify($pass, substr($result['pass'], 0, 60 ))){
         $_SESSION['id'] = $result['id'];
         $_SESSION['email'] = $result['email'];
         $_SESSION['level'] = $result['level'];
-        header('Location: dashboard/index.html');
+        header('Location: '.MOE_URL.'dashboard/index.php');
     } else {
-        header('Location: index.html#fail');
+        header('Location: '.MOE_URL.'index.html#fail-cred');
         die(0);
     }
     
@@ -53,8 +53,26 @@ function manageFile ($filename, $delid, $blacklist) {
 
 }
 
+function countFiles () {
+
+    global $db;
+    $d = $db->prepare("SELECT count(*) FROM files");
+    $d->execute();
+
+    return $d->fetchColumn();
+}
+
+function countSize () {
+
+    global $db;
+    $d = $db->prepare("SELECT sum(size) FROM files");
+    $d->execute();
+
+    return $d->fetchColumn() / 1000000;
+
+}
+
 function fetchData ($count, $keyWord) {
 
-    
 
 }
