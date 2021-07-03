@@ -2,7 +2,7 @@
 require_once('core.php');
 
 if(!isset($_GET['d'])){
-    die('What do you want?');
+    reportError(false, '404', 'Please provide a valid parameter.');
 }
 
 switch($_GET['d']) {
@@ -12,13 +12,14 @@ switch($_GET['d']) {
         break;
 
     case 'delete':
-        manageFile($_GET['filename'], $_GET['fileid'], $_GET['blacklist']);
+        checkSession(false);
+        manageFile($_GET['fileid'], $_GET['blacklist']);
         break;
 
     case "fetchData":
-        fetchData($_GET['keyword']);
+        checkSession(false);
+        fetchData($_GET['limit'], $_GET['keyword']);
         break;
-
 
     case 'logout':
         session_unset();
@@ -28,5 +29,5 @@ switch($_GET['d']) {
         break;
 
     default:
-        die('???');
+    reportError('404', 'Please provide a valid parameter.');
 }

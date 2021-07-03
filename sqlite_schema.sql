@@ -16,4 +16,10 @@ CREATE TABLE `accounts` (
 ,  `pass` varchar(255) default NULL
 ,  `level` integer  default NULL
 );
+CREATE TABLE `blacklist` (
+  `id` integer  NOT NULL PRIMARY KEY AUTOINCREMENT
+,  `hash` char(40) default NULL
+,  `originalname` varchar(255) default NULL
+,  `time` integer default NULL
+);
 END TRANSACTION;

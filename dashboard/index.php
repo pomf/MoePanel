@@ -1,7 +1,6 @@
-<?php session_start();
-  if(!isset($_SESSION['id'])) {
-  header('Location: ../index.php');}
-  ?>
+<?php require_once('../includes/php/core.php');
+checkSession(true);
+?>
 <!doctype html>
 <html lang="en">
   <head>

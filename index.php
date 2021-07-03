@@ -1,7 +1,9 @@
-<?php session_start();
-  if(isset($_SESSION['id'])) {
-  header('Location: dashboard/index.php');}
-  ?>
+<?php
+session_start();
+if(isset($_SESSION['moe'])){
+  header('Location: dashboard/');
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
