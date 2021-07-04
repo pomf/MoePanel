@@ -11,25 +11,24 @@ var limit = document.getElementById("limit").value;
     return;
   }
 
-
+  var moe_host = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port;
   var xmlhttp=new XMLHttpRequest();
   xmlhttp.onreadystatechange=function() {
     if (this.readyState==4 && this.status==200) {
     myObj = JSON.parse(this.responseText);
     let text = ""
-    var moe_host = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port;
     for (let x in myObj) {
     var size = myObj[x].size / 1000000;
-    size = size.toFixed(1);
+    size = size.toFixed(2);
 
     document.getElementById("search-result").style.display = 'block';
     text += '<li class="list-group-item">' +
         '<p><b>ID:</b> ' + myObj[x].id + 
         '<br><b>Hash: </b>' + myObj[x].hash + 
-        '<br><b>Filename: </b>' + myObj[x].filename + 
         '<br><b>Original Name: </b>' + myObj[x].originalname +
+        '<br><b>Filename: </b>' + myObj[x].filename + 
         '<br><b>Size: </b>' + size + 'MB' +
-        '<br><b>Date:</b> </b> ' + myObj[x].time +
+        '<br><b>Date:</b> </b> ' + myObj[x].date +
         '<br><b>IP: </b>' + myObj[x].ip + 
         '<div id="del-buttons">' +
         '<a href="' + moe_host + '/includes/php/api.php?d=delete&fileid=' + myObj[x].id + 
@@ -56,7 +55,7 @@ var limit = document.getElementById("limit").value;
 };
     
 }
-xmlhttp.open("GET","http://localhost:8080/includes/php/api.php?d=fetchData&limit=" + limit + "&keyword=" + keyword, true);
+xmlhttp.open("GET",moe_host + "/includes/php/api.php?d=fetchData&limit=" + limit + "&keyword=" + keyword, true);
 xmlhttp.send();
 }
 </script>
