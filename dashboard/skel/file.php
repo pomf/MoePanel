@@ -19,17 +19,22 @@ var limit = document.getElementById("limit").value;
     let text = ""
     for (let x in myObj) {
     var size = myObj[x].size / 1000000;
-    size = size.toFixed(2);
+    size = size.toFixed(4);
+
+    size = size.toFixed(4);
+
+    const dateObject = new Date(myObj[x].date * 1000);
+    const humanDateFormat = dateObject.toLocaleString();
 
     document.getElementById("search-result").style.display = 'block';
     text += '<li class="list-group-item">' +
-        '<p><b>ID:</b> ' + myObj[x].id + 
-        '<br><b>Hash: </b>' + myObj[x].hash + 
+        '<p><b>ID:</b> ' + myObj[x].id +
+        '<br><b>Hash: </b>' + myObj[x].hash +
+        '<br><b>Filename: </b>' + myObj[x].filename +
         '<br><b>Original Name: </b>' + myObj[x].originalname +
-        '<br><b>Filename: </b>' + myObj[x].filename + 
+        '<br><b>Date:</b> </b> ' + humanDateFormat +
         '<br><b>Size: </b>' + size + 'MB' +
-        '<br><b>Date:</b> </b> ' + myObj[x].date +
-        '<br><b>IP: </b>' + myObj[x].ip + 
+        '<br><b>IP: </b>' + myObj[x].ip +
         '<div id="del-buttons">' +
         '<a href="' + moe_host + '/includes/php/api.php?d=delete&fileid=' + myObj[x].id + 
         '&blacklist=' + false + '" target="_BLANK" class="btn btn-outline-danger btn-sm">' +
