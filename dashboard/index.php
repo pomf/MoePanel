@@ -67,10 +67,7 @@ switch ($_GET['p']) {
 }
 
 ?>
-
-
-
-    <script src="../includes/js/bootstrap.min.js"></script>
-    <script src="../includes/js/moe.js"></script>
+<script src="../includes/js/bootstrap.min.js"></script>
+ <script src="../includes/js/moe.js"></script>
   </body>
 </html>
