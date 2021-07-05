@@ -13,7 +13,6 @@ if(isset($_SESSION['moe'])){
 
     <!-- Bootstrap core CSS -->
 <link href="includes/css/bootstrap.min.css" rel="stylesheet">
-
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -28,19 +27,11 @@ if(isset($_SESSION['moe'])){
           font-size: 3.5rem;
         }
       }
-
-
     </style>
-
-  
-
-    
     <!-- Custom styles for this template -->
     <link href="includes/css/signin.css" rel="stylesheet">
   </head>
-
   <body class="text-center">
-    
 <main class="form-signin">
   <form action="includes/php/api.php?d=login" method="POST">
     <img class="mb-4" src="includes/img/logo.png" alt="" width="150" height="150">
@@ -57,9 +48,6 @@ if(isset($_SESSION['moe'])){
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
     <p class="mt-5 mb-3 text-muted" id="fail" style="display:none;"></p>
   </form>
-  
-
-
 </main>
 <script>
 var textElement = document.getElementById('fail');
