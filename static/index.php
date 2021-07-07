@@ -10,6 +10,7 @@ if(isset($_SESSION['moe'])){
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Moe Panel Login</title>
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png" sizes="32x32">
 
     <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -29,12 +30,12 @@ if(isset($_SESSION['moe'])){
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="css/signin.css" rel="stylesheet">
+    <link href="css/signin.min.css" rel="stylesheet">
   </head>
   <body class="text-center">
 <main class="form-signin">
-  <form action="includes/php/api.php?d=login" method="POST">
-    <img class="mb-4" src="includes/img/logo.png" alt="" width="150" height="150">
+  <form action="api.php?d=login" method="POST">
+    <img class="mb-4" src="img/logo.png" alt="" width="150" height="150">
     <h1 class="h3 mb-3 fw-normal">Moe Panel~</h1>
 
     <div class="form-floating">

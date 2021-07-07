@@ -12,7 +12,8 @@ all: npm_dependencies min-css min-js copy-all
 
 
 min-css:
-	$(NODE) $(CURDIR)/node_modules/.bin/cleancss $(CURDIR)/static/css/moe.css --output $(DESTDIR)/css/uguu.min.css
+	$(NODE) $(CURDIR)/node_modules/.bin/cleancss $(CURDIR)/static/css/moe.css --output $(DESTDIR)/css/moe.min.css
+	$(NODE) $(CURDIR)/node_modules/.bin/cleancss $(CURDIR)/static/css/signin.css --output $(DESTDIR)/css/signin.min.css
 	$(NODE) $(CURDIR)/node_modules/.bin/cleancss $(CURDIR)/static/css/bootstrap.css --output $(DESTDIR)/css/bootstrap.min.css
 
 min-js:

@@ -1,4 +1,4 @@
-<?php require_once('../core.php');
+<?php require_once('../includes/core.php');
 checkSession(true);
 ?>
 <!doctype html>
@@ -7,9 +7,10 @@ checkSession(true);
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Moe Panel - Dashboard</title>
+    <link rel="icon" href="../img/favicon-32x32.png" type="image/png" sizes="32x32">
 
     <!-- Bootstrap core CSS -->
-<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -29,13 +30,13 @@ checkSession(true);
 
     
     <!-- Custom styles for this template -->
-    <link href="/css/moe.css" rel="stylesheet">
+    <link href="../css/moe.min.css" rel="stylesheet">
   </head>
   <body>
 
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
   
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="index.php"><img src="../includes/img/logo.png" alt="" width="30" height="30">  Moe Panel</a>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="index.php"><img src="/img/logo.png" alt="" width="30" height="30">  Moe Panel</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -67,7 +68,6 @@ switch ($_GET['p']) {
     require_once('skel/user.php');
     break;
 
-
   default:
   require_once('skel/stats.php');
   break;
@@ -75,7 +75,7 @@ switch ($_GET['p']) {
 }
 
 ?>
-<script src="/js/bootstrap.min.js"></script>
- <script src="/js/moe.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+ <script src="../js/moe.min.js"></script>
   </body>
 </html>

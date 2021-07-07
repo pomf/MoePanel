@@ -6,7 +6,8 @@ function checkSession($redir) {
 
     if ($redir AND !isset($_SESSION['moe'])) {
         reportError(false, '403', 'Forbidden please log in!');
-        die(header('Location: '.MOE_URL.'index.php'));
+        header('Location: '.MOE_URL.'index.php');
+        die(0);
     }
 
     if (!$redir AND !isset($_SESSION['moe'])) {

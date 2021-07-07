@@ -1,7 +1,7 @@
 <?php
 
 //define('MOE_DB_CONN', 'mysql:unix_socket=/tmp/mysql.sock;dbname=pomf');
-define('MOE_DB_CONN', 'sqlite:/Users/neku/Documents/AlSMNOig.sq3');
+define('MOE_DB_CONN', 'sqlite:/path/to/your/uguu/or/pomf/db.sq3');
 
 /**
  * PDO database login credentials
@@ -20,18 +20,9 @@ define('MOE_DB_PASS', null);
  * 'PU_URL' - URL/[sub]domain to host files from including forward slash
  * 'MOE_URL' - URL for moe including forward slash
  */
-define('MOE_ROOT', '/Users/neku/Documents/MoePanel/MoePanel/');
+define('MOE_ROOT', '/var/www/moepanel/');
 define('FILES_ROOT', '/var/www/files/');
 define('PU_NAME', 'Uguu');
 define('PU_ADDRESS', 'uguu.se');
 define('PU_SERVE_URL', 'https://a.uguu.se/');
-define('MOE_URL', 'http://localhost:8080/');
-
-/** SMTP email settings */
-define('SMTPD_HOST', '');
-define('SMTPD_USERNAME', '');
-define('SMTPD_PASSWORD', '');
-
-/** Cloudflare creds for removing deleted files from their cache */
-define('CF_EMAIL', '');
-define('CF_TOKEN', '');
+define('MOE_URL', 'https://moepanel.uguu.se');

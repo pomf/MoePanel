@@ -1,4 +1,4 @@
-<?php require_once('../core.php');
+<?php require_once('../includes/core.php');
 checkSession(true);
 ?>
 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">

@@ -1,5 +1,5 @@
 <?php
-require_once('core.php');
+require_once('includes/core.php');
 
 if(!isset($_GET['d'])){
     reportError(false, '404', 'Please provide a valid parameter.');
@@ -40,7 +40,7 @@ switch($_GET['d']) {
         session_unset();
         session_destroy();
         session_write_close();
-        header('Location: ../../index.php#logout');
+        header('Location: '.MOE_URL.'index.php#logout');
         break;
 
     default:
