@@ -85,6 +85,6 @@ INSERT INTO accounts VALUES(1,'your@email.com','PASSWORD_HASH_FROM_ABOVE',1);
 ```
 
 
-** Then configure your webserver and PHP to serve from dist/ and you're good to go! **
+**Then configure your webserver and PHP to serve from dist/ and you're good to go!**
 
 
