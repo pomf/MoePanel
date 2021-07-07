@@ -18,12 +18,12 @@ More features such as settings will come in a later release.
 # Installation
 First of all you will need a working Uguu/Pomf installation set up, after that it's rather easy.
 
-Clone the repo
+#### Clone the repo
 ```
 git clone https://github.com/pomf/moepanel
 ```
 
-Edit the static/includes/settings.inc.php file
+#### Edit the static/includes/settings.inc.php file
 ```
 <?php
 
@@ -56,7 +56,7 @@ define('MOE_URL', 'https://moepanel.uguu.se');
 ```
 
 
-Edit gen_pw.php and replace YOURPASSWORDHERE with a password of your liking.
+#### Edit gen_pw.php and replace YOURPASSWORDHERE with a password of your liking.
 ```
 <?php
 $lol = password_hash("YOURPASSWORDHERE", PASSWORD_BCRYPT);
@@ -64,27 +64,27 @@ echo $lol;
 ```
 
 
-then execute the file and copy the output. Is should look something like "$2y$10$0YKZ43iAOFDKK99c7qqBU.LSCVVdHEJyFXL5k.XZCVsSwchR5nOMa"
+#### then execute the file and copy the output.
 ```
 php gen_pw.php
 ```
 
 
 
-Run make
+#### Run make
 ```
 cd /path/to/moe
 make
 ```
 
 
-Insert your user into your DB.
+#### Insert your user into your DB.
 ```
 sqlite3 /var/www/db/your_pomf_db.sq3
 INSERT INTO accounts VALUES(1,'your@email.com','PASSWORD_HASH_FROM_ABOVE',1);
 ```
 
 
-Then configure your webserver and PHP to serve from dist/ and you're good to go!
+** Then configure your webserver and PHP to serve from dist/ and you're good to go! **
 
 
