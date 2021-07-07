@@ -1,15 +1,23 @@
 {
-    "name": "Moe Panel",
-    "version": "1.0.0",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/pomf/moepanel"
-    },
-    "author": "Eric Johansson <neku@pomf.se>",
-    "contributors": [
-    ],
-    "license": "MIT",
-    "bugs": {
-      "url": "https://github.com/pomf/moepanel/issues"
-    }
+  "name": "moepanel",
+  "version": "1.0.0",
+  "description": "Admin panel for Uguu/Pomf",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pomf/moepanel"
+  },
+  "author": "Eric Johansson <neku@pomf.se>",
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pomf/moepanel/issues/"
+  },
+  "devDependencies": {
+    "clean-css": "^5.1.2",
+    "clean-css-cli": "^5.3.0",
+    "uglify-js": "^3.13.9"
+  },
+  "dependencies": {
+    "htmlmin": "0.0.6"
+  }
 }

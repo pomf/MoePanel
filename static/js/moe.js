@@ -72,7 +72,7 @@ function getSearchResult(keyword, type) {
             document.getElementById("search-result").innerHTML = text;
         };
     }
-    xmlhttp.open("GET",moe_host + "/includes/php/api.php?d=" + type + "&limit=" + limit + "&keyword=" + keyword, true);
+    xmlhttp.open("GET",moe_host + "/api.php?d=" + type + "&limit=" + limit + "&keyword=" + keyword, true);
     xmlhttp.send();
 }
 
@@ -108,7 +108,7 @@ function sendData( data , api, div) {
   } );
 
   // Set up our request
-  XHR.open( 'POST', moe_host + '/includes/php/api.php?d=' + api, true);
+  XHR.open( 'POST', moe_host + '/api.php?d=' + api, true);
 
   // Add the required HTTP header for form data POST requests
   XHR.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded; charset=utf-8' );

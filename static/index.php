@@ -12,7 +12,7 @@ if(isset($_SESSION['moe'])){
     <title>Moe Panel Login</title>
 
     <!-- Bootstrap core CSS -->
-<link href="includes/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -29,7 +29,7 @@ if(isset($_SESSION['moe'])){
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="includes/css/signin.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
   </head>
   <body class="text-center">
 <main class="form-signin">

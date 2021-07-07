@@ -3,7 +3,7 @@
         <h1 class="h2">Status</h1>
       </div>
     <?php 
-      require_once('../includes/php/core.php');
+      require_once('../core.php');
       checkSession(true);
       ?>
       <p> <?php echo showVersion(); ?></p>

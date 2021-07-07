@@ -1,4 +1,4 @@
-<?php require_once('../includes/php/core.php');
+<?php require_once('../core.php');
 checkSession(true);
 ?>
 <!doctype html>
@@ -9,7 +9,7 @@ checkSession(true);
     <title>Moe Panel - Dashboard</title>
 
     <!-- Bootstrap core CSS -->
-<link href="../includes/css/bootstrap.css" rel="stylesheet">
+<link href="/css/bootstrap.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -29,7 +29,7 @@ checkSession(true);
 
     
     <!-- Custom styles for this template -->
-    <link href="../includes/css/moe.css" rel="stylesheet">
+    <link href="/css/moe.css" rel="stylesheet">
   </head>
   <body>
 
@@ -39,11 +39,6 @@ checkSession(true);
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="navbar-nav">
-    <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="../includes/php/api.php?d=logout">Sign out</a>
-    </div>
-  </div>
 </header>
 
 <?php 
@@ -80,7 +75,7 @@ switch ($_GET['p']) {
 }
 
 ?>
-<script src="../includes/js/bootstrap.min.js"></script>
- <script src="../includes/js/moe.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+ <script src="/js/moe.js"></script>
   </body>
 </html>
