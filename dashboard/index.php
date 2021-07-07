@@ -9,7 +9,7 @@ checkSession(true);
     <title>Moe Panel - Dashboard</title>
 
     <!-- Bootstrap core CSS -->
-<link href="../includes/css/bootstrap.min.css" rel="stylesheet">
+<link href="../includes/css/bootstrap.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -29,7 +29,7 @@ checkSession(true);
 
     
     <!-- Custom styles for this template -->
-    <link href="../includes/css/dashboard.css" rel="stylesheet">
+    <link href="../includes/css/moe.css" rel="stylesheet">
   </head>
   <body>
 
@@ -47,7 +47,7 @@ checkSession(true);
 </header>
 
 <?php 
-require_once('skel/nav.html'); 
+require_once('skel/nav.php'); 
 
 if(!isset($_GET['p'])){
   require_once('skel/stats.php');
@@ -60,8 +60,21 @@ switch ($_GET['p']) {
     require_once('skel/file.php');
     break;
 
+  case 'settings':
+    require_once('skel/settings.php');
+    break;
+
+  case 'blacklist':
+    require_once('skel/blacklist.php');
+    break;
+
+  case 'user':
+    require_once('skel/user.php');
+    break;
+
+
   default:
-  echo "xd";
+  require_once('skel/stats.php');
   break;
 }
 }

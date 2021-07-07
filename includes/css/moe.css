@@ -3,10 +3,16 @@ body {
 }
 
 .feather {
-  width: 16px;
-  height: 16px;
+  width: 17px;
+  height: 17px;
   vertical-align: text-bottom;
+  fill: black;
 }
+
+.del-buttons {
+  text-align:center;
+}
+
 
 /*
  * Sidebar

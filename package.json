@@ -1,0 +1,15 @@
+{
+    "name": "Moe Panel",
+    "version": "1.0.0",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/pomf/moepanel"
+    },
+    "author": "Eric Johansson <neku@pomf.se>",
+    "contributors": [
+    ],
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/pomf/moepanel/issues"
+    }
+}

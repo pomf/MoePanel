@@ -13,12 +13,27 @@ switch($_GET['d']) {
 
     case 'delete':
         checkSession(false);
-        manageFile($_GET['fileid'], $_GET['blacklist']);
+        manageFile($_POST['fileid'], $_POST['blacklist']);
+        break;
+
+    case 'deleteBlacklist':
+        checkSession(false);
+        deleteBlacklist($_POST['fileid']);
         break;
 
     case "fetchData":
         checkSession(false);
         fetchData($_GET['limit'], $_GET['keyword']);
+        break;
+
+    case "fetchBlacklist":
+        checkSession(false);
+        fetchBlacklist($_GET['limit'], $_GET['keyword']);
+        break;
+
+    case "changePassword":
+        checkSession(false);
+        changePassword($_POST['pass']);
         break;
 
     case 'logout':
