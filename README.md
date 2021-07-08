@@ -18,6 +18,8 @@ More features such as settings will come in a later release.
 # Installation
 First of all you will need a working Uguu/Pomf installation set up, after that it's rather easy.
 
+**You need to run the latest version of Uguu/Pomf for this panel to work since it introduced some DB changes!**
+
 #### Clone the repo
 ```
 git clone https://github.com/pomf/moepanel
