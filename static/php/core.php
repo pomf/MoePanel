@@ -145,7 +145,7 @@ function showVersion () {
     print $a->{'name'}.' Version: '.$a->{'version'};
 }
 
-function fetchData ($limit, $keyWord,) {
+function fetchData ($limit, $keyWord) {
 
     if(empty($limit)) {
         die(reportError(false, '400', 'Please provide a limit.'));
@@ -167,7 +167,7 @@ function fetchData ($limit, $keyWord,) {
 
 }
 
-function fetchBlacklist ($limit, $keyWord,) {
+function fetchBlacklist ($limit, $keyWord) {
 
     if(empty($limit)) {
         die(reportError(false, '400', 'Please provide a limit.'));
