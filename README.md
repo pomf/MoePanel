@@ -25,7 +25,7 @@ First of all you will need a working Uguu/Pomf installation set up, after that i
 git clone https://github.com/pomf/moepanel
 ```
 
-#### Edit the static/includes/settings.inc.php file
+#### Edit the moepanel/static/php/settings.inc.php file
 ```
 <?php
 
