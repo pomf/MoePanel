@@ -14,11 +14,11 @@ define('MOE_DB_PASS', null);
 
 /**
  * 'MOE_ROOT' - Root location for the Moe Panel
- * 'FILES_ROOT' - Where uploaded files are stored
+ * 'FILES_ROOT' - Location where uploaded files for Uguu/Pomf are stored
  * 'PU_NAME' - Pomf/uguu instance name
  * 'PU_ADDRESS' - Pomf/uguu address/[sub]domain
- * 'PU_URL' - URL/[sub]domain to host files from including forward slash
- * 'MOE_URL' - URL for moe including forward slash
+ * 'PU_URL' - URL where Pomf/Uguu serves files from
+ * 'MOE_URL' - URL for Moe Panel
  */
 define('MOE_ROOT', '/var/www/moepanel/');
 define('FILES_ROOT', '/var/www/files/');
