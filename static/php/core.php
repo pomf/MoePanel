@@ -156,10 +156,9 @@ function fetchData ($limit, $keyWord,) {
     }
 
     global $db;
-    $key = ''.$keyWord.'';
-    $d = $db->prepare("SELECT * FROM files WHERE filename like (:word) OR hash = (:word) OR ip like (:word) OR originalname like (:word) LIMIT (:limit)");
-    $d->bindParam(':word', $key);
-    $d->bindParam(':limit', $limit);
+    $d = $db->prepare("SELECT * FROM files WHERE filename like (:word) OR hash = (:word) OR ip like (:word) OR originalname like (:word) ORDER BY id DESC LIMIT :limit");
+    $d->bindParam(':word', $keyWord);
+    $d->bindValue(':limit', (int)trim($limit), PDO::PARAM_INT);
     $d->execute();
 
     header('Content-Type: application/json');
@@ -179,10 +178,9 @@ function fetchBlacklist ($limit, $keyWord,) {
 
 
     global $db;
-    $key = ''.$keyWord.'';
-    $d = $db->prepare("SELECT * FROM blacklist WHERE originalname like (:word) OR hash = (:word) LIMIT (:limit)");
-    $d->bindParam(':word', $key);
-    $d->bindParam(':limit', $limit);
+    $d = $db->prepare("SELECT * FROM blacklist WHERE originalname like (:word) OR hash = (:word) ORDER BY id DESC LIMIT :limit");
+    $d->bindParam(':word', $keyWord);
+    $d->bindValue(':limit', (int)trim($limit), PDO::PARAM_INT);
     $d->execute();
     
     header('Content-Type: application/json');
