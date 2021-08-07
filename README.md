@@ -1,11 +1,11 @@
 # Moe Panel
- Admin panel for Uguu and Pomf, easy as. :)
+ Admin panel for Uguu and Pomf which makes it easier to remove and blacklist files.
  
 # Features
-* Information about number of files uploaded
-* Search files uploaded by hash/filename/etc
-* Blacklist or delete files
-* Search and manage blacklist database
+* Information about number of files uploaded & storage used.
+* Search files uploaded by hash/filename/etc.
+* Blacklist or delete files.
+* Search and manage blacklist database.
 
 More features such as settings will come in a later release.
  
