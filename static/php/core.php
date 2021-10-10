@@ -52,7 +52,6 @@ function login ($user, $pass) {
         header('Location: '.MOE_URL.'index.html#fail-cred');
         die(0);
     }
-    
 }
 
 function manageFile ($id, $blopt) {
@@ -84,9 +83,9 @@ function manageFile ($id, $blopt) {
 
         if(file_exists(FILES_ROOT.$result['filename'])){
             unlink(FILES_ROOT.$result['filename']);
-            die(reportError(true, '200', 'File successfully deleted and blacklisted.'));
+            reportError(true, '200', 'File successfully deleted and blacklisted.');
         }else{
-            die(reportError(false, '200', 'File successfully blacklisted.'));
+            reportError(false, '200', 'File successfully blacklisted.');
         }
 
     } else {
@@ -97,9 +96,9 @@ function manageFile ($id, $blopt) {
 
         if(file_exists(FILES_ROOT.$result['filename'])){
             unlink(FILES_ROOT.$result['filename']);
-            die(reportError(true, '200', 'File successfully deleted.'));
+            reportError(true, '200', 'File successfully deleted.');
         }else{
-            die(reportError(false, '400', 'File not found.'));
+            reportError(false, '400', 'File not found.');
         }
     }
 
@@ -164,6 +163,39 @@ function fetchData ($limit, $keyWord) {
     header('Content-Type: application/json');
     echo json_encode($d->fetchAll(PDO::FETCH_ASSOC), JSON_FORCE_OBJECT);
 
+}
+
+function getIDIP ($id) {
+    global $db;
+    $d = $db->prepare("SELECT ip FROM files WHERE id = (:id)");
+    $d->bindParam(':id', $id);
+    $d->execute();
+    $result = $d->fetch(PDO::FETCH_ASSOC);
+    return $result['ip'];
+}
+
+function delAllIP ($id, $blopt) {
+    
+    if(empty($id)) {
+        echo (reportError(false, '400', 'Please provide a IP.'));
+    }
+
+    $ipaddr = getIDIP($id);
+
+    global $db;
+    $d = $db->prepare("SELECT id FROM files WHERE ip = (:ip)");
+    $d->bindParam(':ip', $ipaddr);
+    $d->execute();
+
+    $id = $d->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($id as $row) {
+        if($blopt === "true") {
+            manageFile($row['id'], "true");
+        } else {
+            manageFile($row['id'], "false");
+        }
+      }
 }
 
 function fetchBlacklist ($limit, $keyWord) {

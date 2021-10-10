@@ -31,6 +31,16 @@ switch($_GET['d']) {
         fetchBlacklist($_GET['limit'], $_GET['keyword']);
         break;
 
+    case "delAllIP":
+        checkSession(false);
+        delAllIP($_POST['fileid'], "false");
+        break;
+
+    case "blacklistAllIP":
+        checkSession(false);
+        delAllIP($_POST['fileid'], "true");
+        break;
+
     case "changePassword":
         checkSession(false);
         changePassword($_POST['pass']);
@@ -44,5 +54,5 @@ switch($_GET['d']) {
         break;
 
     default:
-    reportError('404', 'Please provide a valid parameter.');
+    reportError(false,'404', 'Please provide a valid parameter.');
 }
