@@ -5,6 +5,7 @@
 * Information about number of files uploaded & storage used.
 * Search files uploaded by hash/filename/etc.
 * Blacklist or delete files.
+* Blacklist or delete all files related to IP.
 * Search and manage blacklist database.
 
 More features such as settings will come in a later release.
