@@ -83,9 +83,9 @@ function manageFile ($id, $blopt) {
 
         if(file_exists(FILES_ROOT.$result['filename'])){
             unlink(FILES_ROOT.$result['filename']);
-            reportError(true, '200', 'File successfully deleted and blacklisted.');
+            echo reportError(true, '200', 'File successfully deleted and blacklisted.');
         }else{
-            reportError(false, '200', 'File successfully blacklisted.');
+            echo reportError(false, '200', 'File successfully blacklisted.');
         }
 
     } else {
@@ -96,9 +96,9 @@ function manageFile ($id, $blopt) {
 
         if(file_exists(FILES_ROOT.$result['filename'])){
             unlink(FILES_ROOT.$result['filename']);
-            reportError(true, '200', 'File successfully deleted.');
+            echo reportError(true, '200', 'File successfully deleted.');
         }else{
-            reportError(false, '400', 'File not found.');
+            echo reportError(false, '400', 'File not found.');
         }
     }
 
