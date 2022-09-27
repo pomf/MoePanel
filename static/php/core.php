@@ -47,7 +47,7 @@ function login ($user, $pass) {
         $_SESSION['id'] = $result['id'];
         $_SESSION['email'] = $result['email'];
         $_SESSION['level'] = $result['level'];
-        header('Location: '.MOE_URL.'dashboard/index.php');
+        header('Location: '.MOE_URL.'/dashboard/index.php');
     } else {
         header('Location: '.MOE_URL.'index.html#fail-cred');
         die(0);
