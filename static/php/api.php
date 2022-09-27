@@ -50,7 +50,7 @@ switch($_GET['d']) {
         session_unset();
         session_destroy();
         session_write_close();
-        header('Location: '.MOE_URL.'index.php#logout');
+        header('Location: '.MOE_URL.'/index.php#logout');
         break;
 
     default:
