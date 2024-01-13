@@ -25,4 +25,4 @@ define('FILES_ROOT', '/var/www/files/');
 define('PU_NAME', 'Uguu');
 define('PU_ADDRESS', 'uguu.se');
 define('PU_SERVE_URL', 'https://a.uguu.se/');
-define('MOE_URL', 'https://moepanel.uguu.se');
+define('MOE_URL', 'https://moepanel.uguu.se/');
