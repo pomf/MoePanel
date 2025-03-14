@@ -1,3 +1,6 @@
+# NOTICE!
+This code should be seen as deprecated until updated, will probably not work correctly with newer versions of Uguu. 
+
 # Moe Panel
  Admin panel for Uguu and Pomf which makes it easier to remove and blacklist files.
  
